@@ -11,8 +11,6 @@
           <img class="sicredi-logo" src="./assets/image.png" alt="" srcset="" width="50px">
         </template>
 
-        <img src="./assets/" alt="" srcset="">
-
         <v-btn class="text-none bg-green-darken-3 mr-12 px-3 py-5 d-flex"><p class="btn-text">Abrir conta</p></v-btn>
 
       </v-app-bar>
