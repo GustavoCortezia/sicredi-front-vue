@@ -4,11 +4,11 @@
 
 
 <template>
-  <v-app class="bg-white">
-    <v-container class="container1 bg-red">
-      <v-app-bar :elevation="1" class="bg-white pa-2" >
+  <v-app class="bg-white" >
+    <v-container class="container1 bg-red" >
+      <v-app-bar :elevation="1" class="bg-white pa-2">
         <template v-slot:prepend>
-          <img class="sicredi-logo" src="./assets/image.png" alt="" srcset="">
+          <img class="sicredi-logo" src="./assets/image.png" alt="" srcset="" width="50px">
         </template>
 
         <img src="./assets/" alt="" srcset="">
@@ -49,7 +49,7 @@
       <div class="teste-div d-flex">
             <div class="cards d-flex px-10">
               <v-row>
-                <v-col sm="12" lg="4" md="6">
+                <v-col class="col-card" sm="12" lg="4" md="6">
                     <v-card
                       class="card-background mx-auto"
                       width="95%"
@@ -58,6 +58,7 @@
                       <v-img
                         class="align-end text-white"
                         height="250"
+                        width="100%"
                         src="./assets/card1_img.webp"
                         cover
                       >
@@ -78,7 +79,7 @@
                     </v-card>
                 </v-col>
 
-                <v-col  sm="12" lg="4" md="6">
+                <v-col class="col-card" sm="12" lg="4" md="6">
                     <v-card
                       class="card-background mx-auto"
                       width="95%"
@@ -87,6 +88,7 @@
                       <v-img
                         class="align-end text-white"
                         height="250"
+                        width="100%"
                         src="./assets/card2_img.webp"
                         cover
                       >
@@ -106,7 +108,7 @@
 
                     </v-card>
                 </v-col>
-                <v-col  sm="12" lg="4" md="6">
+                <v-col class="col-card" sm="12" lg="4" md="6">
                     <v-card
                       class="card-background mx-auto"
                       width="95%"
@@ -115,6 +117,7 @@
                       <v-img
                         class="align-end text-white"
                         height="250"
+                        width="100%"
                         src="./assets/card3_img.webp"
                         cover
                       >
@@ -143,11 +146,11 @@
       <p class="text-h6 ml-12 mb-5">Encontre o cartão ideal para realizar seus planos.</p>
 
         <div class="teste-div d-flex">
-            <div class="cards d-flex px-10" >
+            <div class="cards d-flex px-10" width="100%" >
               <v-row>
 
                 <v-col sm="12" lg="4" md="6">
-                  <v-card class="sicredi-card bg-white d-flex pa-8" width="100%" height="450">
+                  <v-card class="sicredi-card bg-white d-flex pa-8" width="100%" height="500">
                     <v-card-title class="title-card2">Cartão Sicredi Gold</v-card-title>
                     <v-btn class="text-none bg-green-darken-1 mt-4 mb-6 px-6" size="large"><p class="btn-label">Solicitar Cartão</p></v-btn>
                     <v-card-text>  <p class="card-icon-text ml-n2"> <img src="./assets/icon_seguro-protecao.png" width="25px" class="mr-3"> Seguro proteção de preço </p> <p class="ml-7 text-h6 font-weight-medium">Quando voce paga integralmente um item da lista de bens elegíveis, você pode receber a diferença do valor quando encontrar o mesmo item (mesma marca, modelo e ano) por um preço menor.</p></v-card-text>
@@ -156,7 +159,7 @@
                 </v-col>
 
                 <v-col sm="12" lg="4" md="6">
-                  <v-card class="sicredi-card bg-white d-flex pa-8" width="100%" height="450">
+                  <v-card class="sicredi-card bg-white d-flex pa-8" width="100%" height="500">
                     <v-card-title class="title-card2">Cartão Sicredi Platinum</v-card-title>
                     <v-btn class="text-none bg-green-darken-1 mt-4 mb-6 px-6" size="large"><p class="btn-label">Solicitar Cartão</p></v-btn>
                     <v-card-text>  <p class="card-icon-text ml-n2"> <img src="./assets/icon_assistencia.png" width="25px" class="mr-3"> Assistência global de emergência </p> <p class="ml-7 text-h6 font-weight-medium">Atendimento 24 horas por dia, 365 dias por ano, em qualquer idioma, para casos de perda ou roubo de cartão</p></v-card-text>
@@ -166,7 +169,7 @@
 
 
                 <v-col sm="12" lg="4" md="6">
-                  <v-card class="sicredi-card bg-white d-flex pa-8" width="100%" height="450">
+                  <v-card class="sicredi-card bg-white d-flex pa-8" width="100%" height="500">
                     <v-card-title class="title-card2">Cartão Sicredi Mastercard Black<span class = "text-grey-darken-2" >&#x2122; </span></v-card-title>
                     <v-btn class="text-none bg-green-darken-1 mt-4 mb-6 px-6" size="large"><p class="btn-label">Solicitar Cartão</p></v-btn>
                     <v-card-text>  <p class="card-icon-text ml-n2"> <img src="./assets/icon_salas_VIP.png" width="25px" class="mr-3"> Salas VIP </p> <p class="ml-7 text-h6 font-weight-medium">Você aguarda o seu voo no conforto de uma sala VIP. São 1.100 salas em mais de 120 países</p></v-card-text>
@@ -195,6 +198,10 @@
 
 * {
   font-family: 'Nunito';
+}
+
+.v-app-bar {
+  background-color: aqua;
 }
 
   .abrir-conta-title {
@@ -278,6 +285,10 @@
     height: 30rem;
     align-self: center;
     margin-left: 4rem;
+
+    @media (max-width: 950px) {
+      width: 100%;
+    }
   }
 
   .sicredi-logo{
@@ -321,6 +332,11 @@
     background-color: rgb(11, 74, 31);
     height: 711px;
     width: 100%;
+
+     @media (max-width: 950px) {
+      background-color: rgb(11, 74, 31) !important;
+      background-image: url('./assets/background_sicredi_celular.webp');
+    }
   }
 
     .card-name{
@@ -333,6 +349,18 @@
       font-family: 'Exo 2' !important;
       line-height: 110%;
       font-style: italic !important;
+
+      @media (max-width: 950px) {
+        font-size: 2.5rem;
+      }
+    }
+
+    .main-title {
+      @media (max-width: 950px) {
+        margin-top: -90px;
+        margin-bottom: 290px;
+        width: 100% !important;
+      }
     }
 
 
@@ -341,6 +369,36 @@
       border-block-end-width: 1px;
     }
 
+
+    @media (max-width: 564px) {
+        .sicredi-card {
+          width: 380px !important;
+          margin-left: -1rem;
+        }
+
+        .cards {
+          padding: 10px !important;
+          width: 400px;
+        }
+
+        .card-background {
+          width: 90%;
+        }
+
+        h2 {
+          font-size: 1.8rem;
+          margin-left: 10px;
+        }
+
+        .title-card2 {
+          font-size: 1.5rem;
+        }
+
+        .contar {
+          margin-left: 0;
+        }
+
+    }
 
 
 </style>
